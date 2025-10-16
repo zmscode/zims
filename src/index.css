@@ -112,9 +112,13 @@
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50;
+		@apply border-border outline-ring/40;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply text-foreground;
+		background: transparent;
+	}
+	main {
+		background: transparent;
 	}
 }

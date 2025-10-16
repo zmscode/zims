@@ -17,7 +17,7 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
 
 const THEME_STORAGE_KEY = "theme-mode";
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 	const [mode, setModeState] = useState<ThemeMode>("dark");
 
 	const [systemTheme, setSystemTheme] = useState<Theme>("dark");
@@ -72,4 +72,4 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 			{children}
 		</ThemeContext.Provider>
 	);
-}
+};
